@@ -2,9 +2,9 @@
 
 ### Information
 
-Auteur : PECHEY Romain
-Tuteur : NABHOLZ Benoit
-Date : mai 2023 - juin 2023
++ Auteur : PECHEY Romain
++ Tuteur : NABHOLZ Benoit
++ Date : mai 2023 - juin 2023
 
 ### Abstract
 
@@ -14,11 +14,11 @@ Afin de mesurer la taille efficace des populations, deux paramètres, le Dn/Ds 
 
 ### Liste des fichiers
 
-DnDs500C.txt : résultats rapport Dn/Ds
-polymorphisme : résultats polymorphisme
-simulation500C : première version du script SLIM
-simulation500T : dernière version du script SLIM
-Script_stageC : fichier R pour traiter les données
-Vrai_graphique : fichier R pour réaliser les graphiques
++ DnDs500C.txt : résultats rapport Dn/Ds
++ polymorphisme : résultats polymorphisme
++ simulation500C : première version du script SLIM
++ simulation500T : dernière version du script SLIM
++ Script_stageC : fichier R pour traiter les données
++ Vrai_graphique : fichier R pour réaliser les graphiques
 
 ! (https://cdn.futura-sciences.com/cdn-cgi/image/width=1920,quality=60,format=auto/sources/images/actu/adn-definition.jpg)
