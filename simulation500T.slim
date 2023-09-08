@@ -1,0 +1,35 @@
+// Initialisation des différents paramètres moléculaires:
+initialize() {
+	initializeMutationRate(1e-6); // taux de mutation
+	initializeMutationType("m1", 0.5, "f", 0.0); // mutation neutre
+	initializeMutationType("m2", 0.5, "g",-0.25, 0.3); // mutation délétère
+	initializeMutationType("m3", 0.5, "f", 0.1); // mutation avantageuse
+	initializeGenomicElementType("g1", c(m1,m2,m3), c(0.3,0.7,0.0001)); // proportion d'apparition des différentes mutations
+	for (index in 1:2000)
+	initializeGenomicElement(g1, index*2000, index*2000 + 500); // chromosome avec des séquences introniques de 1500pb tous les 500 pb
+	initializeRecombinationRate(1e-6); // taux de recombinaison
+	}
+// Initialisation des autres paramètres
+1 early() {sim.addSubpop("p1",500);} // taille de la population
+5000 late() { // Premier échantillonage à 10Ne (Controle)
+	p1.outputSample(10);// Extraction des données relatives au polymorphisme
+	p1.outputSample(10, filePath = "/home/romain/Simulslim/polymorphisme500T.txt");
+	sim.outputFixedMutations(); // Extraction des données relatives au rapport Dn/Ds
+	sim.outputFixedMutations (filePath = "/home/romain/Simulslim/DnDs500T.txt");
+	}
+// Fluctuation durant 290000 generation avec 3 goulots et 3 expansions 
+5001 { p1.setSubpopulationSize(28); } // diminution de la population d'une taille comprise entre 10 et 50 individus
+// 80 000 ans après (fin de période glaciaire)
+85000 { p1.setSubpopulationSize(500); } // augmentation de la population qui retrouve sa taille initiale
+// 20 000 ans après (début de période glaciaire)
+105000 { p1.setSubpopulationSize(28); }
+185000 { p1.setSubpopulationSize(500); }
+205000 { p1.setSubpopulationSize(28); }
+285000 { p1.setSubpopulationSize(500); }
+287179 late() { // Echantillonage final compris entre 0 et 2500 générations après le dernier goulot
+	p1.outputSample(10);// Extraction des données relatives au polymorphisme
+	p1.outputSample(10, filePath = "/home/romain/Simulslim/polymorphisme500Tin.txt");
+	sim.outputFixedMutations();// Extraction des données relatives au rapport Dn/Ds
+	sim.outputFixedMutations (filePath = "/home/romain/Simulslim/DnDs500Tin.txt");
+	}
+	

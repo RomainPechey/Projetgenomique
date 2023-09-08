@@ -1,0 +1,18 @@
+
+// Initialisation des différents paramètres moléculaires
+initialize() {
+	initializeMutationRate(1e-6); // taux de mutation
+	initializeMutationType("m1", 0.5, "f", 0.0); // mutation neutre
+	initializeMutationType("m2", 0.5, "g",-0.25, 0.3); // mutation délétère
+	initializeGenomicElementType("g1", c(m1,m2), c(0.3,0.7)); // proportion d'apparition des différentes mutations
+	initializeGenomicElement(g1 , 0 ,1000000); // taille chromosome
+	initializeRecombinationRate(1e-6); // taux de recombinaison
+	}
+// Initialisation des autres paramètres
+1 early() {sim.addSubpop("p1",500);} // taille de la population
+5000 late() { // Nombre de générations simulées
+	p1.outputSample(10);// Extraction des données relatives au polymorphisme
+	p1.outputSample(10, filePath = "/home/romain/Simulslim/polymorphisme500C4.txt");
+	sim.outputFixedMutations(); // Extraction des données relatives au rapport Dn/Ds
+	sim.outputFixedMutations (filePath = "/home/romain/Simulslim/DnDs500C4.txt");
+	}
