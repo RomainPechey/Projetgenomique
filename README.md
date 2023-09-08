@@ -1,4 +1,5 @@
-# **Stage M1 :  Comprendre pourquoi deux estimateurs de la taille efficace, le polymorphisme et le rapport Dn/Ds ne sont pas corrélés chez certains groupes d’animaux**
+
+### Stage M1 : Comprendre pourquoi deux estimateurs de la taille efficace, le polymorphisme et le rapport Dn/Ds ne sont pas corrélés chez certains groupes d’animaux 
 
 ### Information
 
@@ -21,4 +22,4 @@ Afin de mesurer la taille efficace des populations, deux paramètres, le Dn/Ds 
 + Script_stageC : fichier R pour traiter les données
 + Vrai_graphique : fichier R pour réaliser les graphiques
 
-! (https://cdn.futura-sciences.com/cdn-cgi/image/width=1920,quality=60,format=auto/sources/images/actu/adn-definition.jpg)
+![ADN definition](https://cdn.futura-sciences.com/cdn-cgi/image/width=1920,quality=60,format=auto/sources/images/actu/adn-definition.jpg)
